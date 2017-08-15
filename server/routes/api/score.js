@@ -12,7 +12,7 @@ module.exports = (app) => {
 			.catch((err) => next(err));
 	});
 
-	app.get('api/score/top', (req, res, next) => {
+	app.get('/api/score/top', (req, res, next) => {
 		Score
 			.find()
 			.sort({score: -1})
