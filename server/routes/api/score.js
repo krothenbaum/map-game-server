@@ -7,6 +7,7 @@ module.exports = (app) => {
 			.exec()
 			.then((score) => {
 				console.log('Random Score: ' + score);
+				res.status(201).redirect('/');
 			})
 			.catch((err) => next(err));
 	});
@@ -19,6 +20,7 @@ module.exports = (app) => {
 			.exec()
 			.then((scores) => {
 				console.log(scores);
+				res.status(201).redirect('/');
 			})
 			.catch((err) => next(err));
 	});
