@@ -19,8 +19,7 @@ module.exports = (app) => {
 			.limit(10)
 			.exec()
 			.then((scores) => {
-				console.log(scores);
-				res.status(201).redirect('/');
+				res.json(scores);
 			})
 			.catch((err) => next(err));
 	});
