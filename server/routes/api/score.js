@@ -29,7 +29,8 @@ module.exports = (app) => {
 		score.save()
 			.then(newScore => {
 				console.log('Score saved: ' + newScore);
-				res.status(201).redirect('/');
+				//temp redirect to local host
+				res.status(201).redirect('http://localhost:3000/ScoreBoard');
 			})
 			.catch(err => {
 				console.log(err);
