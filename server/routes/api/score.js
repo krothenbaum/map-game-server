@@ -29,8 +29,9 @@ module.exports = (app) => {
 		score.save()
 			.then(newScore => {
 				console.log('Score saved: ' + newScore);
+				res.status(201);
 				//temp redirect to local host
-				res.status(201).redirect('https://krothenbaum.github.io/map-game-client/scoreboard');
+				// res.status(201).redirect('https://krothenbaum.github.io/map-game-client/scoreboard');
 			})
 			.catch(err => {
 				console.log(err);
