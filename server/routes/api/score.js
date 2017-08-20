@@ -7,7 +7,7 @@ module.exports = (app) => {
 			.exec()
 			.then((score) => {
 				console.log('Random Score: ' + score);
-				res.status(201).redirect('/');
+				res.status(201).redirect('https://krothenbaum.github.io/map-game-client/');
 			})
 			.catch((err) => next(err));
 	});
@@ -30,7 +30,7 @@ module.exports = (app) => {
 			.then(newScore => {
 				console.log('Score saved: ' + newScore);
 				//temp redirect to local host
-				res.status(201).redirect('http://localhost:3000/ScoreBoard');
+				res.status(201).redirect('https://krothenbaum.github.io/map-game-client/ScoreBoard');
 			})
 			.catch(err => {
 				console.log(err);
