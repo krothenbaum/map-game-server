@@ -25,11 +25,12 @@ module.exports = (app) => {
 	});
 	
 	app.post('/api/score', function (req, res, next) {
+		console.log(req);
 		const score = new Score({name: req.body.name, score: req.body.score});
 		score.save()
 			.then(newScore => {
 				console.log('Score saved: ' + newScore);
-				res.status(201).redirect('http://localhost:3000/');
+				res.status(201)
 				//temp redirect to local host
 				// res.status(201).redirect('https://krothenbaum.github.io/map-game-client/scoreboard');
 			})
