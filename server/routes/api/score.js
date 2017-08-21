@@ -25,7 +25,7 @@ module.exports = (app) => {
 	});
 	
 	app.post('/api/score', function (req, res, next) {
-		console.log(req.body.name);
+		console.log(req.body);
 		const score = new Score({name: req.body.name, score: req.body.score});
 		score.save()
 			.then(newScore => {
