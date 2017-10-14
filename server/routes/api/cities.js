@@ -16,7 +16,7 @@ module.exports = (app) => {
       .catch((err) => next(err));
   });
 
-  app.get('/api/randomcity', (req, res, next) => {
+  app.get('/api/randomcities', (req, res, next) => {
   	City.count()
   		.exec()
   		.then((count) => {
