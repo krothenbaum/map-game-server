@@ -38,7 +38,12 @@ module.exports = (app) => {
 					.sort({date: -1})
 					.limit(1)
 					.then(score =>{
-						scores.push(score);
+						for( let i = 0; i < scores.length; i++) {
+							if(scores[i]._id == score[0]._id) {
+								return res.json(scores);
+							}
+						}
+						scores.push(score[0]);
 						res.json(scores);
 					})
 			})
