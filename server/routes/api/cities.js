@@ -7,7 +7,7 @@ module.exports = (app) => {
       .exec()
       .then((cities) => {
       	let citiesArr = [];
-      	for(let i = 0; i < 2; i++) { 
+      	for(let i = 0; i < 2; i++) {
       		const random = Math.floor(Math.random() * cities.length);
       		citiesArr.push(cities[random]);
       	}
