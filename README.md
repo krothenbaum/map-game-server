@@ -1,33 +1,9 @@
-# MERN-boilerplate
+# React Game - API
 
-This is a boilerplate project using the following technologies:
-- [React](https://facebook.github.io/react/) and [React Router](https://github.com/reactjs/react-router) for the frontend
-- [Express](http://expressjs.com/) and [Mongoose](http://mongoosejs.com/) for the backend
-- [Sass](http://sass-lang.com/) for styles (using the SCSS syntax)
-- [Webpack 2](https://webpack.github.io/) for compilation
+Server side code to serve random cities and save and return scores.
 
-
-## Requirements
-
-- [Node.js](https://nodejs.org/en/) 6+
-
-```shell
-npm install
-```
-
-
-## Running
-
-Make sure to add a `config.js` file in the `config` folder. See the example there for more details.
-
-Production mode:
-
-```shell
-npm start
-```
-
-Development (Webpack dev server) mode:
-
-```shell
-npm run start:dev
-```
+Technology used:
+* JavaScript
+* Node.js
+* Express.js
+* MongoDB
