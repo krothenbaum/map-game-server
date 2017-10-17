@@ -6,13 +6,14 @@ module.exports = (app) => {
 		Score
 			.find()
 			.sort({score: -1})
+			.limit(10)
 			.exec()
 			.then((scores) => {
 				Score
 					.find()
 					.sort({date: -1})
 					.limit(1)
-					.then(score =>{
+					.then(score => {
 						scores.push(score[0]);
 						res.json(scores);
 					})
